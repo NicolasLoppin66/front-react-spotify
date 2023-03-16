@@ -50,4 +50,4 @@ export const dataUserNav = [
 ]
 
 // On récupère le logo de l'appli
-export const imgLogo = `${apiRoute}/image/logo.png`
+export const imgLogo = `${apiRoute}/image/logo2.png`

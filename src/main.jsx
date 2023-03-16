@@ -1,12 +1,12 @@
 // Import des modules
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 // Import des page / composent
-import App from './App'
 import store from './redux/store'
+import Router from './tools/Router'
 
 // Import du style de l'app
 import './index.css'
@@ -17,9 +17,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* On appelle notre store */}
     <Provider store={store}>
       {/* On appelle le router pour gérer les Url */}
-      <BrowserRouter>
+      <RouterProvider router={Router} />
+      {/* <BrowserRouter>
         <App />
-      </BrowserRouter>
+      </BrowserRouter> */}
     </Provider>
   </React.StrictMode>,
 )
