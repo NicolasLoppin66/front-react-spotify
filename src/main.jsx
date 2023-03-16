@@ -1,10 +1,15 @@
+// Import des modules
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import App from './App'
-import './index.css'
 import { Provider } from 'react-redux'
+
+// Import des page / composent
+import App from './App'
 import store from './redux/store'
+
+// Import du style de l'app
+import './index.css'
 
 // Arbre de l'application
 ReactDOM.createRoot(document.getElementById('root')).render(
