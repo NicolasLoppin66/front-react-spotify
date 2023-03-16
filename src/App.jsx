@@ -1,34 +1,15 @@
 // rafce
-import React, { useEffect ,useState } from 'react'
-import Test from './components/Test'
+import React, { useEffect, useState } from 'react'
+import Home from './screens/Home'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
-  const [data3, setData3] = useState('toto3')
-
-  useEffect(() => {
-    // Montage du composent
-    setData3('toto4')
-  
-    /*
-    return () => {
-      // Démontage du composent
-      second
-    }
-    */
-  }, /* Update */[])
-  
-
-  console.log(data3)
-  const params = {
-    nom: 'toto',
-    prenom: 'tutu'
-  }
-
   return (
-    <Test 
-    data={params} 
-    data2={'toto'} 
-    />
+    // Routes qui sert d'aiguillage des différentes routes
+    <Routes>
+      {/* On va déclarer notre première route */}
+      <Route path='/' element={<Home />} />
+    </Routes>
   )
 }
 
