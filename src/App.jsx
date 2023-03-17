@@ -12,7 +12,7 @@ const App = () => {
       <div className='flex-1 flex flex-col bg-gradient-to-b from-[#1d1d1d] to-[#121212]'>
         {/* Ici on aura la futur topbar */}
         <Topbar />
-        <div className='px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scollbar flex xl:flex-row flex-col-reverse'>
+        <div className='h-[calc(100vh-72px)] overflow-y-scroll hide-scollbar flex xl:flex-row flex-col-reverse'>
           <div className='flex-1 h-fit pb-40 text-white'>
             <Outlet />
             {/* // Routes qui sert d'aiguillage des différentes routes */}
