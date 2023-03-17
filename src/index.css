@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Active navigation menu */
+.active {
+  @apply text-green;
+}
+
+.active svg {
+  @apply text-green;
+}
+
+/* TOPBAR */
+::-webkit-scrollbar {
+  width: 10px; /* Couleur de la scrollbar */
+  background-color: transparent; /* rend la scrollbar transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* couleur du "thumb" en vert */
+  border-radius: 5px; /* arrondi les coin de "thumb" */
+}
