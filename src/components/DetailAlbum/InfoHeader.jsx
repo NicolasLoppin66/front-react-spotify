@@ -1,4 +1,7 @@
+// Import module
 import React from 'react'
+
+// Import de l'api
 import { apiImage } from '../../constants/apiConstant'
 
 const InfoHeader = ({ dataAlbum }) => {
