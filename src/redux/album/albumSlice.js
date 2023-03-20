@@ -1,5 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+// Import module
 import axios from "axios";
+
+// Import composant
+import { createSlice } from "@reduxjs/toolkit";
+
+// Import constant api
 import { api } from "../../constants/apiConstant"
 
 const slice = createSlice({
