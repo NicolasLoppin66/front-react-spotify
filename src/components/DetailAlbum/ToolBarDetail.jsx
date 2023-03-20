@@ -17,7 +17,7 @@ import {
     MdInfo
 } from 'react-icons/md'
 
-
+// Import du composant
 import InfoAlbum from './InfoAlbum'
 
 const ToolBarDetail = ({ dataAlbum }) => {

@@ -28,4 +28,7 @@
   border-radius: 5px; /* arrondi les coin de "thumb" */
 }
 
-/*  */
+/* Collapse transition */
+.ReactCollapse--collapse {
+  transition: height 1750ms;
+}

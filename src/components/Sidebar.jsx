@@ -1,7 +1,12 @@
+// Import des module
 import { NavLink } from 'react-router-dom'
-import { dataAlbumNav, dataUserNav, imgLogo } from '../constants/appConstant'
 import { useState } from 'react'
+
+// Import des icon
 import { RiCloseLine, RiMenuFill } from 'react-icons/ri'
+
+// Import des constante
+import { dataAlbumNav, dataUserNav, imgLogo } from '../constants/appConstant'
 
 // Constance pour générer les différents onglets de la sidebar a partir de appConstant
 const NavLinks = ({ handleClick }) => {

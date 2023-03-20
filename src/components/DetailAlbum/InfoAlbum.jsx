@@ -1,3 +1,5 @@
+// Import module
+import parse from 'html-react-parser'
 import React from 'react'
 
 // Import des icon
@@ -14,8 +16,7 @@ import {
     BsCalendarWeekFill
 } from 'react-icons/bs'
 
-// Import module
-import parse from 'html-react-parser'
+// Import du composant
 import InfoIconLabel from './InfoIconLabel'
 
 const InfoAlbum = ({ dataAlbum }) => {
