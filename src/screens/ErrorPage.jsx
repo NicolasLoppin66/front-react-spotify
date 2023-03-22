@@ -9,7 +9,7 @@ const ErrorPage = () => {
 
   return (
     <div id='error-page' className='flex flex-col items-center justify-center h-screen bg-black text-white'>
-      <CiWarning style={{ fontSize: 50, color: 'red' }} />
+      <CiWarning style={{ fontSize: 350, color: 'red' }} />
       <h1>Oops !!</h1>
       <p>Désoler, mais une erreur s'est produite</p>
       <p>

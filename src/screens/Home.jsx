@@ -18,6 +18,8 @@ const Home = () => {
 	// On récupérer les info du slice du player
 	// Pour savoir si une chanson est en cour de lecture et si le player est actif
 	const { activeSong, isPlaying } = useSelector((state) => state.player)
+	console.log('song', activeSong);
+	console.log('playing', isPlaying);
 
 	//  On utilise le hook useEffect pour "dispatcher" lors du montage du composant
 	useEffect(() => {
@@ -33,7 +35,6 @@ const Home = () => {
 
 	return (
 		loading ? <Loader /> :
-
 			<div className='flex flex-col '>
 				<h2 className='font-bold text-3xl text-white text-left mt-4 mb-10'>
 					Tous les albums

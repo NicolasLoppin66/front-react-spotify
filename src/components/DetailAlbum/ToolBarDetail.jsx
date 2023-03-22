@@ -17,12 +17,42 @@ import {
     MdInfo
 } from 'react-icons/md'
 
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 // Import du composant
+import { playPause, setActiveAlbum, setActiveSong } from '../../redux/player/playerSlice.js'
 import InfoAlbum from './InfoAlbum'
+import PlayPause from '../PlayPause'
 
 const ToolBarDetail = ({ dataAlbum }) => {
+    // Redefinir des variable pour le playPause
+    const data = dataAlbum
+    const songs = dataAlbum?.songs
+
+    const [index, setIndex] = useState(0)
     const [isInList, setIsInList] = useState(false) // TODO : récupéré la vrai valeur en BDD 
     const [isCollapse, setIsCollapse] = useState(true)
+
+    const { isPlaying, activeSong } = useSelector((state) => state.player)
+    console.log(isPlaying)
+    console.log(activeSong)
+
+    // On récupére le hook de react redux
+    // Pour pouvoir interagir avec la slide
+    const dispatch = useDispatch()
+
+    // Méthode lorsqu'on met pause
+    const handlePauseClick = () => {
+        dispatch(playPause(false))
+    }
+
+    // Methode lorsqu'on met play
+    const handlePlayClick = () => {
+        // On met a jours le slice du player
+        dispatch(setActiveSong({ songs, data, index }))
+        dispatch(setActiveAlbum({ data }))
+        dispatch(playPause(true))
+    }
 
     const toggleFavorite = () => {
         setIsInList(!isInList);
@@ -39,7 +69,15 @@ const ToolBarDetail = ({ dataAlbum }) => {
                 {/* Bouton Play */}
                 <div className='cursor-pointer mr-3'>
                     {/* Add real PlayPause component */}
-                    <FiPlayCircle size='45' className='text-green' />
+                    <PlayPause
+                        songs={songs}
+                        handlePause={handlePauseClick}
+                        handlePlay={handlePlayClick}
+                        isPlaying={isPlaying}
+                        activeSong={activeSong}
+                        index={index}
+                        data={data}
+                    />
                 </div>
                 {/* Bouton pour Favorie */}
                 <div className='cursor-pointer mr-3' onClick={() => toggleFavorite()}>

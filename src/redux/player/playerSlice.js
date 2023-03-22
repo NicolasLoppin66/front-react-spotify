@@ -17,6 +17,7 @@ const playerSlice = createSlice({
     reducers: {
         // Tout ce que l'on stock lorsque qu'on active un chanson
         setActiveSong: (state, action) => {
+            // console.log(action);
             // Stokage de la chanson en lecture
             state.activeSong = action.payload.songs[action.payload.index]
             // Stokage entier du tableau de chanson

@@ -9,7 +9,7 @@ import { playPause, setActiveAlbum, setActiveSong } from '../redux/player/player
 import PlayPause from './PlayPause';
 
 const AlbumCard = ({ data, index, songs, isPlaying, activeSong }) => {
-    console.log({ data, index, songs, isPlaying, activeSong });
+    // console.log({ data, index, songs, isPlaying, activeSong });
     // On recupere l'image de l'album
     const imgPath = `${apiImage}/${data.imagePath}`
     // console.log(data);
@@ -46,15 +46,15 @@ const AlbumCard = ({ data, index, songs, isPlaying, activeSong }) => {
                 </Link>
                 {/* Ici on place notre composant play / pause */}
                 <div className={`absolute ${activeSong?.title === songs[index]?.title ? `flex` : `hidden`} group-hover:flex right-3 bottom-5`}>
-                    <div className='group-hover:animate-slideup bg-black outline-none rounded-full group-hover:duration-75 overflow-hidden'>
+                    <div className='group-hover:animate-slideup2 bg-black outline-none rounded-full group-hover:duration-75 overflow-hidden'>
                         <PlayPause
                             songs={songs}
-                            handlePauseClick={handlePauseClick}
-                            handlePlayClick={() => handlePlayClick(index)}
+                            handlePause={handlePauseClick}
+                            handlePlay={() => handlePlayClick(index)}
                             isPlaying={isPlaying}
                             activeSong={activeSong}
-                            data={data}
                             index={index}
+                            data={data}
                         />
                     </div>
                 </div>
