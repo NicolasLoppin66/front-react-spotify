@@ -27,8 +27,6 @@ const App = () => {
             {/* <Route path='/wishlist' element={<Wishlist />} /> */}
             {/* </Routes> */}
           </div>
-          {/* TODO ici les player */}
-
         </div>
       </div>
       {activeSong?.title && (

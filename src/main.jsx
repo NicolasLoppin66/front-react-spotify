@@ -10,17 +10,12 @@ import Router from './tools/Router'
 
 // Import du style de l'app
 import './index.css'
+import { AuthContextProvider } from './tools/AuthContext'
+import AppRoot from './tools/AppRoot'
 
 // Arbre de l'application
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* On appelle notre store */}
-    <Provider store={store}>
-      {/* On appelle le router pour gérer les Url */}
-      <RouterProvider router={Router} />
-      {/* <BrowserRouter>
-        <App />
-      </BrowserRouter> */}
-    </Provider>
+    <AppRoot />
   </React.StrictMode>,
 )

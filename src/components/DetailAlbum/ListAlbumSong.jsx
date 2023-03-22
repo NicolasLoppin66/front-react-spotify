@@ -1,5 +1,6 @@
 // Import module
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 // Import des icons
 import {
@@ -9,12 +10,34 @@ import {
     FiPlayCircle
 } from 'react-icons/fi'
 
+import { playPause, setActiveAlbum, setActiveSong } from '../../redux/player/playerSlice'
+import PlayPause from '../PlayPause'
+
 const ListAlbumSong = ({ dataAlbum }) => {
+    const data = dataAlbum
+
     // On récupére le tableau des chansons
     const songs = dataAlbum.songs
 
     // On déclare une constante isHover
     const [isHover, setIsHover] = useState(-1)
+
+    // On recupere les infos du store
+    const { isPlaying, activeSong } = useSelector((state) => state.player)
+
+    // On appelle le hook useDispatch
+    const dispatch = useDispatch();
+
+    // Methode play / pause
+    const handlePauseClick = () => {
+        dispatch(playPause(false))
+    }
+    const handlePlayClick = (index) => {
+        dispatch(setActiveSong({ songs, data, index }))
+        dispatch(setActiveAlbum({ data }))
+        dispatch(playPause(true))
+    }
+
 
     return (
         <div className='flex flec-col'>
@@ -54,7 +77,15 @@ const ListAlbumSong = ({ dataAlbum }) => {
                                                 <td className='whitespace-nowrap px-6 py-4 font-medium m-1'>
                                                     {/* On utilise isHover pour afficher le bouton play */}
                                                     {isHover !== index && `#${index + 1}`}
-                                                    {isHover === index && <FiPlayCircle style={{ height: '16px', width: '16px' }} />}
+                                                    {isHover === index && <PlayPause
+                                                        size="16px"
+                                                        songs={songs}
+                                                        handlePause={handlePauseClick}
+                                                        handlePlay={() => handlePlayClick(index)}
+                                                        isPlaying={isPlaying}
+                                                        activeSong={activeSong}
+                                                        index={index}
+                                                    />}
                                                 </td>
                                                 <td className='whitespace-nowrap px-6 py-4 font-medium m-1'>{row.title}</td>
                                                 <td className='whitespace-nowrap px-6 py-4 font-medium m-1'>{duration}</td>
