@@ -17,15 +17,6 @@ const App = () => {
         <div className='h-[calc(100vh-72px)] overflow-y-scroll hide-scollbar flex xl:flex-row flex-col-reverse'>
           <div className='flex-1 h-fit pb-40 text-white'>
             <Outlet />
-            {/* // Routes qui sert d'aiguillage des différentes routes */}
-            {/* <Routes> */}
-            {/* On va déclarer notre première route */}
-            {/* <Route path='/' element={<Home />} /> */}
-            {/* <Route path='/library' element={<Library />} /> */}
-            {/* <Route path='/add-playlist' element={<Playlist />} /> */}
-            {/* <Route path='/search' element={<Search />} /> */}
-            {/* <Route path='/wishlist' element={<Wishlist />} /> */}
-            {/* </Routes> */}
           </div>
         </div>
       </div>

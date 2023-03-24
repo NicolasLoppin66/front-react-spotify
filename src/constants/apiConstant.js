@@ -1,7 +1,7 @@
 // apiConstant => recensera toutes les Urls liée à notre API
 
 // On déclare notre Url d'api de base ( nom de domaine )
-export const apiRoute = 'http://api_symfony.lndo.site';
+export const apiRoot = 'http://api_symfony.lndo.site';
 
 // On déclare notre Url d'api
 export const api = 'http://api_symfony.lndo.site/api';

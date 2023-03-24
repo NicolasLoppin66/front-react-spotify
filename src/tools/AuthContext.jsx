@@ -14,18 +14,19 @@ const AuthContext = createContext({
 })
 
 const AuthContextProvider = ({ children }) => {
-    const [userId, setUserId] = useState('')
-    const [isGuest, setIsGuest] = useState('')
-    const [email, setEmail] = useState('')
+    const [userId, setUserId] = useState("")
+    const [isGuest, setIsGuest] = useState("")
+    const [email, setEmail] = useState("")
 
     const signIn = async user => {
         try {
             setUserId(user.userId)
             setIsGuest(user.isGuest)
             setEmail(user.email)
+
             localStorage.setItem("userInfos", JSON.stringify(user))
-        } catch (err) {
-            throw new Error(`error : ${err}`)
+        } catch (error) {
+            throw new Error(`error : ${error}`)
         }
     }
 
@@ -35,8 +36,8 @@ const AuthContextProvider = ({ children }) => {
             setIsGuest("")
             setEmail("")
             localStorage.removeItem("userInfos")
-        } catch (err) {
-            throw new Error(`error : ${err}`)
+        } catch (error) {
+            throw new Error(`error : ${error}`)
         }
     }
 
@@ -44,9 +45,11 @@ const AuthContextProvider = ({ children }) => {
         userId,
         isGuest,
         email,
+
         setUserId,
         setIsGuest,
         setEmail,
+
         signIn,
         signOut
     }
@@ -59,4 +62,4 @@ const AuthContextProvider = ({ children }) => {
 }
 const useAuthContext = () => useContext(AuthContext)
 
-export { AuthContext, useAuthContext, AuthContextProvider }
+export { AuthContext, AuthContextProvider, useAuthContext }

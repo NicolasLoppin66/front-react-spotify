@@ -5,8 +5,10 @@ const initialState = {
     currentSongs: [], // Un tableau de chanson
     currentAlbum: [], // Album en cour de lecture
     currentIndex: [], // Index de la chanson en cour de lecture
+
     isActive: false, // Si le player est active 
     isPlaying: false, // Si on est en mode play
+    
     activeSong: {}, // La chanson en cours de lecture
 }
 

@@ -5,13 +5,13 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 
 // Import des screens
-import ErrorPage from "../screens/ErrorPage";
 import Home from "../screens/Home";
 import Search from "../screens/Search";
-import Library from "../screens/Library";
-import Playlist from "../screens/Playlist";
-import Wishlist from "../screens/Wishlist";
 import Detail from "../screens/Detail";
+import Library from "../screens/Library";
+import Wishlist from "../screens/Wishlist";
+import Playlist from "../screens/Playlist";
+import ErrorPage from "../screens/ErrorPage";
 
 const Router = createBrowserRouter([
     {

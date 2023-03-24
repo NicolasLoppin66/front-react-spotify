@@ -2,12 +2,12 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // Import des screens
-import HomeOffline from "../screens/Offline/HomeOffline";
 import Login from "../screens/Offline/Login";
-import Registration from "../screens/Offline/Registration";
 import ErrorPage from "../screens/ErrorPage";
+import HomeOffline from "../screens/Offline/HomeOffline";
+import Registration from "../screens/Offline/Registration";
 
-const Router = createBrowserRouter([
+const OfflineRouter = createBrowserRouter([
     {
         element: (
             <>
@@ -34,4 +34,4 @@ const Router = createBrowserRouter([
     }
 ])
 
-export default Router;
+export default OfflineRouter;

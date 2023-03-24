@@ -34,8 +34,8 @@ const ToolBarDetail = ({ dataAlbum }) => {
     const [isCollapse, setIsCollapse] = useState(true)
 
     const { isPlaying, activeSong } = useSelector((state) => state.player)
-    console.log(isPlaying)
-    console.log(activeSong)
+    // console.log(isPlaying)
+    // console.log(activeSong)
 
     // On récupére le hook de react redux
     // Pour pouvoir interagir avec la slide

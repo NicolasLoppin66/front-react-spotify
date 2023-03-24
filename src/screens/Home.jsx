@@ -18,14 +18,11 @@ const Home = () => {
 	// On récupérer les info du slice du player
 	// Pour savoir si une chanson est en cour de lecture et si le player est actif
 	const { activeSong, isPlaying } = useSelector((state) => state.player)
-	console.log('song', activeSong);
-	console.log('playing', isPlaying);
 
 	//  On utilise le hook useEffect pour "dispatcher" lors du montage du composant
 	useEffect(() => {
 		// On dispatch fetchAlbumn des que l'on monte le composent
 		dispatch(fetchAlbums())
-
 	}, [dispatch]) // Dans l'update on appelle le dispach pour mettre a jour les info
 
 	const { albums, loading } = useSelector(selectAlbumsData)

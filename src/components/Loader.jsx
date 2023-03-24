@@ -1,5 +1,5 @@
 import React from 'react'
-import { Audio } from 'react-loader-spinner'
+import { Audio, Dna } from 'react-loader-spinner'
 
 const Loader = () => {
     return (
@@ -11,6 +11,21 @@ const Loader = () => {
                 ariaLabel='audio-loading'
                 wrapperStyle={{}}
                 wrapperClass='wrapper-class'
+                visible={true}
+            />
+        </div>
+    )
+}
+
+const LoaderRegister = () => {
+    return (
+        <div>
+            <Dna
+                height={80}
+                width={80}
+                ariaLabel='dna-loading'
+                wrapperStyle={{}}
+                wrapperClass='dna-wrapper'
                 visible={true}
             />
         </div>

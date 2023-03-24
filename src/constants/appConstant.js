@@ -1,8 +1,6 @@
 // Import d'icon
 import {
-    AiOutlineHome,
-    AiOutlineSearch,
-    AiOutlineAppstoreAdd
+    AiOutlineHome, AiOutlineSearch, AiOutlineAppstoreAdd
 } from 'react-icons/ai'
 import {
     BiLibrary
@@ -12,7 +10,7 @@ import {
 } from 'react-icons/md'
 
 // Import des constant api
-import { apiRoute } from './apiConstant'
+import { apiRoot } from './apiConstant'
 
 // Ici on construit 2 tableau avec les donnée pour la navbar
 // le 1er pour la gestion des albums
@@ -49,4 +47,4 @@ export const dataUserNav = [
 ]
 
 // On récupère le logo de l'appli
-export const imgLogo = `${apiRoute}/image/logo2.png`
+export const imgLogo = `${apiRoot}/image/logo2.png`

@@ -33,8 +33,6 @@ const Searchbar = () => {
                     onChange={(e) => setSearchWord(e.target.value)}
                 />
             </div>
-
-
         </form>
     )
 }
